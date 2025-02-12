@@ -33,5 +33,4 @@ func main() {
 		fmt.Print(string(s[j].letter))
 		j = s[j].index
 	}
-	fmt.Println()
 }
