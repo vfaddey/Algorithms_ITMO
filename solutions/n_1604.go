@@ -27,7 +27,7 @@ func (pq *PriorityQueue) Pop() interface{} {
 	return item
 }
 
-func solve(k int, counts []int) []int {
+func solve_task(k int, counts []int) []int {
 	pq := make(PriorityQueue, 0)
 	for i := 0; i < k; i++ {
 		if counts[i] > 0 {
@@ -78,7 +78,7 @@ func main() {
 		fmt.Scan(&counts[i])
 	}
 
-	sequence := solve(k, counts)
+	sequence := solve_task(k, counts)
 	for i, id := range sequence {
 		if i > 0 {
 			fmt.Print(" ")
