@@ -7,13 +7,11 @@ import (
 	"os"
 )
 
-// Элемент для очереди с приоритетом
 type Item struct {
 	node int
 	dist int64
 }
 
-// Пирамидальная реализация очереди с приоритетом (min-heap)
 type PriorityQueue []Item
 
 func (pq PriorityQueue) Len() int { return len(pq) }
@@ -102,7 +100,6 @@ func main() {
 			sBytes[i] = orig
 		}
 
-		// Соседи: обмен двух цифр
 		for i := 0; i < 10; i++ {
 			for j := i + 1; j < 10; j++ {
 				if sBytes[i] == sBytes[j] {
@@ -127,7 +124,6 @@ func main() {
 		return
 	}
 
-	// Восстановление пути
 	path := []int{}
 	for cur := dst; cur != -1; cur = prev[cur] {
 		path = append(path, cur+1)
